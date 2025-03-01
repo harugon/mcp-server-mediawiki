@@ -841,7 +841,7 @@ async function handleParse(content: string, title?: string) {
 // サーバーセットアップ
 const server = new Server(
     {
-        name: "mcp-server/mediawiki",
+        name: "harugon/mcp-server-mediawiki",
         version: "0.1.0",
     },
     {
