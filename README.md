@@ -28,7 +28,7 @@ Claude設定ファイルでの設定例:
   "mcpServers": {
    "mediawiki": {
       "command": "npm",
-      "args": ["G:\\github\\mcp-server-mediawiki\\dist\\index.js"],
+      "args": ["@harugon/mediawiki-mcp-server"],
       "env": {
         "MEDIAWIKI_PROTOCOL": "https",
         "MEDIAWIKI_SERVER": "ja.wikipedia.org",
