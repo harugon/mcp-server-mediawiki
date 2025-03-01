@@ -1,0 +1,39 @@
+{
+  "name": "mcp-server-mediawiki",
+  "version": "1.0.0",
+  "description": "MediaWiki Model Context Protocol server ",
+  "main": "dist/index.js",
+  "type": "module",
+  "bin": {
+    "mcp-server-filesystem": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc && shx chmod +x dist/*.js",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "start": "node dist/index.js",
+    "dev": "ts-node --esm src/index.ts",
+    "test": "vitest run",
+    "lint": "eslint src/**/*.ts",
+    "inspect": "npx @modelcontextprotocol/inspector -e MEDIAWIKI_SERVER=ja.wikipedia.org -e MEDIAWIKI_PATH=/w  node dist/index.js"
+  },
+  "keywords": [
+    "mediawiki",
+    "mcp",
+    "claude",
+    "api"
+  ],
+  "author": "harugoon",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.6.1",
+    "nodemw": "^0.24.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.8"
+  }
+}
